@@ -1,0 +1,27 @@
+<%
+  text = <<~TEXT
+    # Rails課題「RailsへのMarkdownの導入」
+    ## 中見出し
+    ### 小見出し
+
+    ```rb
+    puts "hello world"
+    ```
+
+    ***
+    ### 名前リスト
+      - なおと
+      - たろう
+      - たけさん
+
+    ***
+    ### 強調表示
+    標準 **太字**
+
+    ***
+    ### リンク
+    - [Qiita](https://qiita.com/)
+    - [Railsチュートリアル](https://railstutorial.jp/)
+  TEXT
+%>
+<%= markdown(text).html_safe %>
